@@ -23,6 +23,8 @@ struct ContentView: View {
                 Section{
                     TextField("Enter yourword", text: $newWord)
                         .textInputAutocapitalization(.never)
+                        .autocorrectionDisabled(true)
+                        .border(Color.gray, width: 2)
                 }
                 
                 Section{
