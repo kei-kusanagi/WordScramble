@@ -49,6 +49,12 @@ struct ContentView: View {
     func addNewWord() {
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         guard answer.count > 0 else { return }
+        
+        guard !isShort(word: answer) else {
+               wordError(title: "Word is too short", message: "Please use more than 3 characters.")
+               return
+           }
+        
         guard isOriginal(word: answer) else {
             wordError(title: "Word used already", message: "Be more original")
             return
@@ -64,6 +70,7 @@ struct ContentView: View {
             return
         }
         
+
         withAnimation{
             usedWords.insert(answer, at: 0)
         }
@@ -86,6 +93,10 @@ struct ContentView: View {
     
     func isOriginal(word: String) -> Bool{
         !usedWords.contains(word)
+    }
+    
+    func isShort(word: String) -> Bool{
+        word.count < 3
     }
     
     func isPossible(word: String) -> Bool {
