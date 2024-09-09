@@ -44,6 +44,12 @@ struct ContentView: View {
             } message: {
                 Text(errorMessage)
             }
+            .toolbar {
+                Button("New Game") {
+                    startGame()
+                }
+                
+            }
         }
     }
     func addNewWord() {
@@ -83,6 +89,7 @@ struct ContentView: View {
                 let allWords = startWords.components(separatedBy: "\n")
                 
                 rootWord = allWords.randomElement() ?? "silkworm"
+                usedWords = []
                 
                 return
             }
