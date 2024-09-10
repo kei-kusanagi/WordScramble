@@ -18,4 +18,9 @@ Una de las mejores maneras de aprender es escribir tu propio código tan a menud
 
 - Agregar un botón en la barra de herramientas que llame a la función startGame(), para que los usuarios puedan reiniciar con una nueva palabra cuando quieran.
 
+![image](https://github.com/user-attachments/assets/16176342-f978-478e-8a9b-79207fb859f1)
+
+
 - Colocar una vista de texto en algún lugar para que puedas rastrear y mostrar la puntuación del jugador para una palabra raíz determinada. La forma en que calcules la puntuación depende de ti, pero algo que involucre el número de palabras y la cantidad de letras sería razonable.
+
+![image](https://github.com/user-attachments/assets/cb474006-83f2-4c65-a39b-a4764d355b32)
